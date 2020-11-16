@@ -1,0 +1,9 @@
+.vscode/*
+!.vscode/launch.json
+!.vscode/tasks.json
+.history
+*.o
+*.a
+*.out
+*.dSYM
+.DS_Store

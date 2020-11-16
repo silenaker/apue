@@ -1,0 +1,30 @@
+{
+  // See https://go.microsoft.com/fwlink/?LinkId=733558
+  // for the documentation about the tasks.json format
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "make",
+      "type": "shell",
+      "command": "make",
+      "args": ["${relativeFileDirname}/${fileBasenameNoExtension}"],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    },
+    {
+      "label": "make clean",
+      "type": "shell",
+      "command": "make",
+      "args": ["clean"]
+    },
+    // https://github.com/microsoft/vscode-cpptools/issues/5079#issuecomment-626090192
+    {
+      "label": "Open Terminal",
+      "type": "shell",
+      "command": "osascript -e 'tell application \"Terminal\"\ndo script \"echo hello\"\nend tell'",
+      "problemMatcher": []
+    }
+  ]
+}
